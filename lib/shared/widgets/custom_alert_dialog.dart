@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mind_snack/core/theme/app_color_theme.dart';
 
 class CustomAlertDialog extends StatelessWidget {
   final String title;
@@ -20,11 +21,14 @@ class CustomAlertDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).extension<AppColorTheme>();
+
     return AlertDialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       title: Text(title),
       content: Text(content),
       actions: [
+        SizedBox(height: 10),
         if (onCancel != null)
           TextButton(
             onPressed: () {
@@ -38,7 +42,10 @@ class CustomAlertDialog extends StatelessWidget {
             if (onConfirm != null) onConfirm!();
             Navigator.of(context).pop();
           },
-          child: Text(confirmText ?? "OK"),
+          child: Text(
+            confirmText ?? "OK",
+            style: TextStyle(color: colors?.text),
+          ),
         ),
       ],
     );
