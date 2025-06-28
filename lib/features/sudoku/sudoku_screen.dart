@@ -56,7 +56,8 @@ class _SudokuScreenState extends State<SudokuScreen> {
       appBar: CustomAppBar(title: 'Судоку'),
       body: Column(
         children: [
-          Expanded(
+          SizedBox(
+            height: 460,
             child: Stack(
               children: [
                 Padding(

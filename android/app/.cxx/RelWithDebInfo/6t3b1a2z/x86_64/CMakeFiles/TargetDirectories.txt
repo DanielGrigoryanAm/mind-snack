@@ -1,0 +1,2 @@
+/Users/daniel/Documents/mind_snack/android/app/.cxx/RelWithDebInfo/6t3b1a2z/x86_64/CMakeFiles/edit_cache.dir
+/Users/daniel/Documents/mind_snack/android/app/.cxx/RelWithDebInfo/6t3b1a2z/x86_64/CMakeFiles/rebuild_cache.dir

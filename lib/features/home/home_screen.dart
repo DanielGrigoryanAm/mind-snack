@@ -15,6 +15,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         title: 'mind_snack'.tr(),
+        showSettings: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -23,19 +24,23 @@ class HomeScreen extends StatelessWidget {
             spacing: 20,
             children: [
               SectionContainer(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => MazeScreen())),
+                onTap: () => Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => MazeScreen())),
                 text: 'mazes'.tr(),
               ),
               SectionContainer(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => RiddlesScreen())),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => RiddlesScreen())),
                 text: 'riddles'.tr(),
               ),
               SectionContainer(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SudokuScreen())),
+                onTap: () => Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => SudokuScreen())),
                 text: 'sudoku'.tr(),
               ),
               SectionContainer(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => CrosswordsScreen())),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => CrosswordsScreen())),
                 text: 'crosswords'.tr(),
               ),
             ],

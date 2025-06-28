@@ -6,9 +6,11 @@ class SectionContainer extends StatelessWidget {
     super.key,
     required this.text,
     required this.onTap,
+    this.blocking,
   });
   final String text;
   final VoidCallback onTap;
+  final bool? blocking;
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +26,23 @@ class SectionContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           color: colors?.primary,
         ),
-        child: Center(
-          child: Text(
-            style: TextStyle(
-              fontSize: 30,
+        child: Stack(
+          children: [
+            Center(
+              child: Text(
+                style: TextStyle(
+                  fontSize: 30,
+                ),
+                text,
+              ),
             ),
-            text,
-          ),
+            if (blocking ?? false)
+              Positioned(
+                right: 10,
+                top: 10,
+                child: Icon(Icons.lock),
+              ),
+          ],
         ),
       ),
     );

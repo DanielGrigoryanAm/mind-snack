@@ -7,6 +7,6 @@ class AppColorPalette {
   static const Color textLight = Color(0xFFFFFFFF);
   static const Color textDark = Color(0xFF2C2C2C);
 
-  static const Color mediumLight = Color(0xFFF8FAC3);
+  static const Color mediumLight = Color(0x9357D5FF);
   static const Color mediumDark = Color(0xFF616161);
 }
